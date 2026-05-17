@@ -1,7 +1,15 @@
-input.onButtonPressed(Button.A, function () {
-    music.setBuiltInSpeakerEnabled(true)
-    music.play(music.stringPlayable("D A E D B F B C ", 120), music.PlaybackMode.UntilDone)
+input.onButtonPressed(Button.AB, function () {
+    Acebott.LCD1602_ShowString(0, 0, "Hola Mario")
+    Acebott.LCD1602_CreateCharacter(CharIndex.C1, Acebott.LCD1602_CharacterPixels(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . # . # .
+        . . . . .
+        # . . . #
+        . # # # .
+        `))
+    Acebott.LCD1602_Showchararacter(7, 1, CharIndex.C1)
 })
-input.onButtonPressed(Button.B, function () {
-    music.play(music.stringPlayable("C5 B A G F D E C ", 120), music.PlaybackMode.UntilDone)
-})
+Acebott.LCD1602_Init()
